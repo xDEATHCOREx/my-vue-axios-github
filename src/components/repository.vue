@@ -1,10 +1,10 @@
 <template>
-	<div v-loading="loading2"  element-loading-text="Please wait a second">
+	<div v-loading="loading2"  element-loading-text="Please wait a second" >
 		<div style="text-align: center" v-if="!logIn">
 			<i class="el-icon-loading loading" ></i>
 		<strong class="notice">Please wait a second</strong>
 		</div>
-	<ul>
+	<ul id="lists">
 	<li v-for="list in lists" >
   			<el-card class="box-card" >
   			<div class="header">
@@ -27,8 +27,7 @@
 					<i class="el-icon-date"></i>
 					{{list.updated_at}}	
 				</div>
-			</div>
-			
+			</div>	
 			</el-card>
 
 	</li>

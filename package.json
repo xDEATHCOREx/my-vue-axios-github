@@ -1,6 +1,6 @@
 {
-  "name": "my-vue-axios-github-master",
-  "description": "A Vue.js project",
+  "name": "my-vue-axios-github",
+  "description": "A Vue.js project using axios,vue-router&element UI",
   "version": "1.0.0",
   "author": "xDEATHCOREx <530063870@qq.com>",
   "private": true,
@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "element-ui": "^1.2.5",
+    "perfect-scrollbar": "^0.6.16",
     "vue": "^2.2.1",
     "vue-router": "^2.2.1",
     "vuex": "^2.1.2"

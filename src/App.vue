@@ -1,8 +1,8 @@
 <template>
 <div>
   <div class="nav">
-  <el-button v-on:click="logOut" v-show="token">LogOut</el-button>
-    <p>{{userName}}</p>
+  <el-button v-on:click="logOut" v-show="token" class="logout-btn">LogOut</el-button>
+    <p>Welcome! {{userName}}</p>
   </div>
   <router-view></router-view>
 </div>
@@ -24,10 +24,26 @@ export default {
   }),
   methods:{
     logOut(){
-      this.$store.commit('logOut')
-      this.$router.push({
-        path : '/'
-      })
+       this.$confirm('Confirm to logout?', '提示', {
+          confirmButtonText: 'Confirm',
+          cancelButtonText: 'Cancel',
+          type: 'warning'
+        }).then(() => {
+          this.$message({
+            type: 'success',
+            message: 'already logout'
+          });
+          this.$store.commit('logOut')
+          this.$router.push({
+            path : '/'
+          })
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: 'action canceled.'
+          });          
+        });
+    
     }
   }
 }
@@ -39,9 +55,17 @@ export default {
     padding: 0;
   }
   .nav{
+    box-sizing: border-box;
+    padding-left:10px;
     width: 100%;
     height: 50px;
     background-color: #1D8CE0;
     margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .logout-btn{
   }
 </style>
