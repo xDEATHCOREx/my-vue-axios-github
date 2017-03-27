@@ -5,15 +5,30 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
 	state:{
-		user:{},
+		userName:'',
 		token:null,
-		title:''
+		title:'',
+		logIn:false,
 	},
 	mutations:{
-		logIn:(state,data)=>{
-			localStorage.token = data;//token存进LS
-			state.token = data;//同样存进store的state中
+		logIn:(state,token)=>{
+			localStorage.token = token//token存进LS
+			state.token = token//同样存进store的state中
+			console.info("logged in")
 		},
+		logOut:(state)=>{
+			localStorage.removeItem('token')
+			state.token = null 
+			state.userName = ''
+			state.logIn = false
+			console.info("logged in?",state.logIn)
+		},
+		setUserName:(state,data)=>{
+			state.userName = data
+		},
+		success:(state)=>{
+			state.logIn = true
+		}
 	}
 })
 

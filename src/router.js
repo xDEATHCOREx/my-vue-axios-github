@@ -27,6 +27,12 @@ const routes = [
 	}
 ]
 
+let tokenLS = localStorage.getItem('token')
+if(tokenLS){
+	console.warn("tokenLS existed,automatic logging in...")
+	store.commit('logIn',tokenLS)
+}
+
 const router = new VueRouter({
 	routes
 });

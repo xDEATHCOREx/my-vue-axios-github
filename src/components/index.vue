@@ -1,9 +1,10 @@
 <template>
 <div>
-	<div>{{status}}</div>
-	<router-link :to="{path:'/repository'}">
-		View your repositories
-	</router-link>
+	<div class="indexWrap">
+		<router-link :to="{path:'/repository'}">
+			<el-button type="primary" class="viewBtn">View your repositories</el-button>
+		</router-link>
+	</div>
 </div>
 </template>
 <script>
@@ -16,5 +17,11 @@
 	}	
 </script>
 <style type="text/css">
+	.indexWrap{
+		text-align: center;
+		margin: 20px 0;
+	}
+	.viewBtn{
 	
+	}
 </style>
