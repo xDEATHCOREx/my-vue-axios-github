@@ -1,6 +1,6 @@
 # my-vue-axios-github-master
 
-> A Vue.js project
+> A Vue.js project using axios,vue-router&element UI
 
 ## Build Setup
 

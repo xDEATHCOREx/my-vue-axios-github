@@ -101,45 +101,53 @@
 	.el-card__body{
 		padding: 10px;
 	}
-	.detailBtn{
-		 position: absolute;
+	 .detailBtn{
+		position: absolute;
     	top: 50%;
     	left: 50%;
-    	transform: translate(-50%, -50%); 
+    	margin-top: -18px!important;
+    	margin-left: -34px!important;
+    	 -webkit-box-shadow: 0 0 0 -4px #fff, 0 0 0 -1px #fff;
+  		box-shadow: 0 0 0 -4px #fff, 0 0 0 -1px #fff;
+  		-webkit-transition: -webkit-box-shadow .3s;
+  		transition: box-shadow .3s;
+	}
+	.detailBtn:hover,.detailBtn:focus{
+	  background-color: #20a0ff!important;
+	  border-color: #20a0ff!important;
+	  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #20a0ff;
+	  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #20a0ff;
+	  -webkit-transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+	  transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
+	  -webkit-animation: gelatine 0.5s 1;
+	  animation: gelatine 0.5s 1;	
 	}
 	.detail{
 		flex: 1;
-		//text-align: right;
 		position: relative;
-	
 	}
 	.owner{
 		font-size: 14px;
 		line-height: 100%;
-
 	}
 	.title{
-		font-size: 24px;
-		
+		font-size: 24px;	
 	}
 	.desc{
 		opacity: .50;
-		//display: inline-block;
 	}
 	.footer{
 		font-size: 14px;
 		margin-top: 30px;
 		margin-bottom: 5px;
 		position: relative;
-
+		display: flex;
+		justify-content: space-between;
 	}
 	.lang{
-		display: inline-block;
 	}
 	.date{
-		display: inline-block;
-		position: absolute;
-		right:0px;
+		
 	}
 	ul{
 
@@ -153,5 +161,91 @@
 		width: 80px;
 		height: 80px;
 		margin-right: 20px;
-			}
+	}
+
+	/**
+ * $keyframes \ gelatine //定义了动画的关键帧
+ **/
+@keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+}
+@-webkit-keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+}
 </style>

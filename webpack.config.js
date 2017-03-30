@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/myProject/my-vue-axios-github-master/dist/',//影响build后文件读取的路径
+    publicPath: '/dist/',//影响build后文件读取的路径
     filename: 'build.js'
   },
   module: {
